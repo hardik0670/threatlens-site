@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreatLens Privacy Policy</title>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #f8fafc;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 5px;
+        }
+
+        p {
+            color: #cbd5f5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #334155;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1e293b;
+        }
+
+        .highlight {
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>ThreatLens Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> April 15, 2026</p>
+
+        <h2>🛡️ Our Commitment</h2>
+        <p>
+            ThreatLens is built to protect you online. We collect only the minimum data necessary for real-time threat
+            detection.
+            <span class="highlight">We do not sell your data under any circumstances.</span>
+        </p>
+
+        <h2>1. Overview</h2>
+        <p>
+            ThreatLens analyzes websites you visit to detect phishing, malware, and unsafe pages.
+            By using this extension, you agree to this policy.
+        </p>
+
+        <h2>2. What Data We Collect</h2>
+
+        <h3>Automatically Collected Data</h3>
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Domain (origin only)</td>
+                <td>Used for threat scoring (no full URL stored)</td>
+            </tr>
+            <tr>
+                <td>HTTPS status</td>
+                <td>Security indicator</td>
+            </tr>
+            <tr>
+                <td>Form / iframe / script counts</td>
+                <td>Detect phishing patterns</td>
+            </tr>
+            <tr>
+                <td>Keyword count</td>
+                <td>Identify suspicious content</td>
+            </tr>
+            <tr>
+                <td>Page title</td>
+                <td>Displayed in extension UI</td>
+            </tr>
+        </table>
+
+        <h3>We DO NOT Collect</h3>
+        <ul>
+            <li>Full URLs (paths, query params)</li>
+            <li>Browsing history</li>
+            <li>Form inputs or passwords</li>
+            <li>Personal data or identity</li>
+        </ul>
+
+        <h2>3. How We Use Data</h2>
+        <p>
+            Data is securely sent over HTTPS to our analysis server:
+            <br />
+            <strong>https://threatlens-self.vercel.app/predict</strong>
+        </p>
+        <p>
+            The server returns a risk score and flags which are shown in the extension.
+        </p>
+
+        <h2>4. Third-Party Services</h2>
+        <ul>
+            <li>Vercel (API hosting)</li>
+            <li>Google Gemini API (explanations only, no personal data)</li>
+        </ul>
+
+        <h2>5. Data Storage</h2>
+        <p>
+            We do not store user data on servers. Temporary results may be cached locally in your browser.
+        </p>
+
+        <h2>6. Permissions</h2>
+        <p>
+            ThreatLens requires access to web pages to analyze threats in real time.
+            This includes all HTTP/HTTPS sites.
+        </p>
+
+        <h2>7. Security</h2>
+        <ul>
+            <li>All communication is encrypted (HTTPS)</li>
+            <li>No credentials are collected</li>
+            <li>No tracking or fingerprinting</li>
+        </ul>
+
+        <h2>8. Your Control</h2>
+        <p>
+            You can disable or uninstall the extension anytime via Chrome settings.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>
+            Email: <a href="mailto:privacy@threatlens.app">privacy@threatlens.app</a>
+        </p>
+
+        <div class="footer">
+            © 2026 ThreatLens — Web Security Guard
+        </div>
+
+    </div>
+</body>
+
+</html>
