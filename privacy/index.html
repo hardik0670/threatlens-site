@@ -112,8 +112,8 @@
                 <th>Purpose</th>
             </tr>
             <tr>
-                <td>Domain (origin only)</td>
-                <td>Used for threat scoring (no full URL stored)</td>
+                <td>Current Website URL</td>
+                <td>Transmitted securely to evaluate domain reputation (stripped to origin by default).</td>
             </tr>
             <tr>
                 <td>HTTPS status</td>
@@ -141,14 +141,14 @@
             <li>Personal data or identity</li>
         </ul>
 
-        <h2>3. How We Use Data</h2>
+        <h2>3. How We Transmit & Use Data</h2>
         <p>
-            Data is securely sent over HTTPS to our analysis server:
+            To provide real-time threat detection, your active tab's URL and related structural signals are securely transmitted over HTTPS to our analysis server:
             <br />
             <strong>https://threatlens-api.vercel.app/predict</strong>
         </p>
         <p>
-            The server returns a risk score and flags which are shown in the extension.
+            <strong>Strict No-Retention Policy:</strong> We operate on a "scan and forget" basis. Transient data required for generating the security risk score is processed in memory and is <strong>immediately discarded</strong> after the API responds. We do not log, retain, or store the URLs you visit or your browsing history on our servers.
         </p>
 
         <h2>4. Third-Party Services</h2>
