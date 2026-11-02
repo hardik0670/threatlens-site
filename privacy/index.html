@@ -642,7 +642,7 @@
                 <p class="page-eyebrow">Legal</p>
                 <h1 class="page-title">Privacy <em>Policy</em></h1>
                 <p class="page-subtitle">How ThreatLens handles your data — clearly and without the legalese.</p>
-                <p class="page-date">Effective Date: April 15, 2026</p>
+                <p class="page-date">Effective Date: October 30, 2026</p>
             </div>
 
             <!-- COMMITMENT BANNER -->
@@ -687,8 +687,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Current Website URL (origin only)</td>
+                            <td>Website URL (origin by default; full URL when selected)</td>
                             <td>Transmitted securely to evaluate domain reputation</td>
+                        </tr>
+                        <tr>
+                            <td>Public contact details and policy links</td>
+                            <td>Sent to the API to help analyze seller transparency and discover policy pages</td>
                         </tr>
                         <tr>
                             <td>HTTPS Status</td>
@@ -749,7 +753,7 @@
                 <h2 class="section-heading">How We Transmit &amp; Use Data</h2>
                 <div class="divider"></div>
                 <p class="section-body">
-                    To provide real-time threat detection, your active tab's URL and structural signals are securely
+                    To provide real-time threat detection, your active tab's URL, public contact and policy excerpts, source links, and structural signals are securely
                     transmitted over HTTPS to our analysis server:
                 </p>
                 <div class="api-box">
@@ -757,10 +761,9 @@
                     https://threatlens-api.vercel.app/predict
                 </div>
                 <p class="section-body">
-                    <strong>Strict No-Retention Policy:</strong> We operate on a "scan and forget" basis. Data required
-                    to generate your security risk score is processed in memory and immediately discarded after the API
-                    responds. We do not log, retain, or store the URLs you visit or your browsing history on our
-                    servers.
+                    Scan data is processed in memory; the application does not maintain a browsing-history database.
+                    Application logs omit scanned URLs. Our hosting provider may process request metadata such as
+                    IP addresses and timestamps under its own policies.
                 </p>
             </div>
 
@@ -772,11 +775,13 @@
                 <p class="section-body">ThreatLens uses the following third-party services to operate:</p>
                 <div class="pill-list">
                     <span class="pill">Vercel (API hosting)</span>
-                    <span class="pill">Google Gemini API (explanations only)</span>
+                    <span class="pill">Google Gemini API (optional threat explanations)</span>
                 </div>
                 <p class="section-body" style="margin-top: 14px;">
-                    No personal data is transmitted to third-party services. The Gemini API is used solely to generate
-                    human-readable threat explanations and does not receive browsing data tied to your identity.
+                    When you request an AI summary, Gemini receives the scanned URL and analysis indicators.
+                    Seller Insights extracts public policy text on our analysis server without sending it to Gemini.
+                    URLs and policy text can contain personal information. These services process data under their
+                    own policies. Site icons may be requested from Google using the scanned domain.
                 </p>
             </div>
 
@@ -786,8 +791,10 @@
                 <h2 class="section-heading">Data Storage</h2>
                 <div class="divider"></div>
                 <p class="section-body">
-                    We do not store any user data on our servers. Temporary analysis results may be cached locally in
-                    your browser's extension storage to avoid redundant requests — this data never leaves your device.
+                    The application does not use a server-side database for scan history. Scan results are cached
+                    locally for five minutes, and seller details for ten minutes. Page contact signals are held in
+                    browser-session storage, scoped to the tab that supplied them. Relevant signals are sent to the
+                    analysis API when scanning; this is not fully local processing.
                 </p>
             </div>
 
